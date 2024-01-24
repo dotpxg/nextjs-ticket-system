@@ -1,4 +1,4 @@
-import TicketList from "./ticketList";
+import TicketList from "./TicketList";
 
 export default function Tickets() {
   return (
