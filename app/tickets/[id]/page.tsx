@@ -15,11 +15,11 @@ export async function generateStaticParams() {
 
 async function getTicket(id: any) {
   // imitate delay
-  await new Promise(resolve => setTimeout(resolve, 3000))
+  // await new Promise(resolve => setTimeout(resolve, 3000))
   
   const res = await fetch ('http://localhost:4000/tickets/' + id, {
     next: {
-      revalidate: 60 // use 0 to opt out of using cache
+      revalidate: 30 // use 0 to opt out of using cache
     }
   })
   
